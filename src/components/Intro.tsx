@@ -37,7 +37,7 @@ export default function Intro() {
             initial={{opacity: 0, y: 100}}
             animate={{opacity: 1, y: 0}}
             className='mt-8 text-2xl'>
-            <span className="font-bold">Hello, I'm Aryan.</span> I'm a{" "}
+            <span className="font-bold">Hello, I&apos;m Aryan.</span> I&apos;m a{" "}
             <span className="font-bold">full-stack developer</span>. I enjoy
             building <span className="italic">Web Applications and tackling complex problems</span>. 
         </motion.p>
