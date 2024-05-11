@@ -1,9 +1,6 @@
 "use client";
 
 import React, {useRef} from "react";
-import CodeBattlesImg from '../../public/codebattles.png';
-import DocSecureImg from '../../public/DocSecure.png';
-import chatappImg from '../../public/chatapp.png';
 import Image from "next/image";
 import {motion, useScroll, useTransform} from "framer-motion";
 
@@ -12,19 +9,19 @@ const projectsData = [
       title: "CodeBattles",
       description: ["Create and enrol in different courses", "Solve coding problems directly on the platform with an integrated coding environment", "The website has login and signup options and makes use of all the good practices."],
       tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-      imageUrl: CodeBattlesImg,
+      imageUrl: '/codebattles.png',
     },
     {
       title: "DocSecure",
       description: ["DocSecure is a powerful tool that allows us to upload and validate PDF documents securely against entries in the blockchain.", "The tool reads the pdf, creates a hash of the data of the PDF and then stores it on the blockchain."],
       tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-      imageUrl: DocSecureImg,
+      imageUrl: '/DocSecure.png',
     },
     {
       title: "Chat App",
       description: ["Stay connected with friends, family and colleagues in real time using the robust socket.io technology.", "User friendly and responsive interface made using material UI."],
       tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-      imageUrl: chatappImg,
+      imageUrl: '/chatapp.png',
     },
 ];
 
@@ -76,7 +73,7 @@ function Project({title, description, tags, imageUrl} : ProjectProps) {
                     }
                 </ul>
             </div>
-            <Image className="hidden sm:block absolute top-8 right-[-22.5rem] group-even:right-[initial] group-even:left-[-22.5rem] w-[50rem] h-[28.25rem] rounded-t-lg shadow-2xl group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:rotate-2 group-hover:scale-102 group-even:group-hover:translate-x-2 group-even:group-hover:-translate-y-2 group-even:group-hover:-rotate-2 transition" src={imageUrl} alt={title} quality={100}/>
+            <Image className="hidden sm:block absolute top-8 right-[-22.5rem] group-even:right-[initial] group-even:left-[-22.5rem] w-[50rem] h-[28.25rem] rounded-t-lg shadow-2xl group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:rotate-2 group-hover:scale-102 group-even:group-hover:translate-x-2 group-even:group-hover:-translate-y-2 group-even:group-hover:-rotate-2 transition" src={imageUrl} width={400} height={100} alt={title} quality={100}/>
         </motion.article>
     )
 }
